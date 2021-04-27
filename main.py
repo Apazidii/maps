@@ -1,82 +1,181 @@
+from graphics import *
+from PIL import Image as NewImage
+from dijkstar import Graph, find_path
 
-# Класс клетки
-# Элементы:
-#
-# Moved
-# По умолчанию имеет значени false
-# Показатель того, была ли уже эта
-# клетка обработана алгоритмом
-# См. Алгоритм Ли
-#
-# Distance
-# По умолчанию имеет значение 1000
-# В ходе ввыполнения алгоритма будет заменятся
-# на наикрайчашуюю длину пути от точка старта
-# См. Алгоритм Ли
-#
-# ClassRoom
-# Динамическая переменная
-# В ней содержится номер аудитории к которой принадлежит данная клетка
-#
-# NCR - Neighboring Class Room
-# Это массив с номерами кабинетов c которыми граничит данная клетка
-#
-# start, finish
-# Это массивы сотоящиий из 2 элементов int
-# Координаты краев клетки на карте
-class Cell:
-    Moved = False
-    Distance = 1000
-    def __init__(self,ClassRoom,NCR,start,finish, DoorS, DoorF ):
-        self.ClassRoom = ClassRoom
-        self.NCR = NCR
-        self.start = start
-        self.finish = finish
-        self.DoorS = DoorS
-        self.DoorF = DoorF
+graph = Graph()
+graph.add_edge(67,32,1)
+graph.add_edge(32,67,1)
+graph.add_edge(32,33,1)
+graph.add_edge(33,32,1)
+graph.add_edge(33,20,1)
+graph.add_edge(20,33,1)
+graph.add_edge(33,34,1)
+graph.add_edge(34,33,1)
+graph.add_edge(34,21,1)
+graph.add_edge(21,34,1)
+graph.add_edge(34,35,1)
+graph.add_edge(35,34,1)
+graph.add_edge(35,22,1)
+graph.add_edge(22,35,1)
+graph.add_edge(35,36,1)
+graph.add_edge(36,35,1)
+graph.add_edge(36,1, 1)
+graph.add_edge(1,36, 1)
+graph.add_edge(36,37,1)
+graph.add_edge(37,36,1)
+graph.add_edge(37,23,1)
+graph.add_edge(23,37,1)
+graph.add_edge(38,2, 1)
+graph.add_edge(2,38, 1)
+graph.add_edge(38,39,1)
+graph.add_edge(39,38,1)
+graph.add_edge(39,24,1)
+graph.add_edge(24,39,1)
+graph.add_edge(39,40,1)
+graph.add_edge(40,39,1)
+graph.add_edge(40,3, 1)
+graph.add_edge(3,40, 1)
+graph.add_edge(40,41,1)
+graph.add_edge(41,40,1)
+graph.add_edge(41,25,1)
+graph.add_edge(25,41,1)
+graph.add_edge(41,42,1)
+graph.add_edge(42,41,1)
+graph.add_edge(42,4, 1)
+graph.add_edge(4,42, 1)
+graph.add_edge(42,43,1)
+graph.add_edge(43,42,1)
+graph.add_edge(43,44,1)
+graph.add_edge(44,43,1)
+graph.add_edge(44,5,1)
+graph.add_edge(5,44,1)
+graph.add_edge(43,45,1)
+graph.add_edge(45,43,1)
+graph.add_edge(45,6,1)
+graph.add_edge(6,45,1)
+graph.add_edge(45,46,1)
+graph.add_edge(46,45,1)
+graph.add_edge(46,7,1)
+graph.add_edge( 7,46,1)
+graph.add_edge(46,47,1)
+graph.add_edge(47,46,1)
+graph.add_edge(47,8, 1)
+graph.add_edge( 8,47,1)
+graph.add_edge(47,48,1)
+graph.add_edge(48,47,1)
+graph.add_edge(48, 9,1)
+graph.add_edge( 9,48,1)
+graph.add_edge(48,49,1)
+graph.add_edge(49,48,1)
+graph.add_edge(49,50,1)
+graph.add_edge(50,49,1)
+graph.add_edge(50,51,1)
+graph.add_edge(51,50,1)
+graph.add_edge(51,11,1)
+graph.add_edge(11,51,1)
+graph.add_edge(51,10,1)
+graph.add_edge(10,51,1)
+graph.add_edge(49,52,1)
+graph.add_edge(52,49,1)
+graph.add_edge(52,12,1)
+graph.add_edge(12,52,1)
+graph.add_edge(52,53,1)
+graph.add_edge(53,52,1)
+graph.add_edge(53,26,1)
+graph.add_edge(26,53,1)
+graph.add_edge(53,54,1)
+graph.add_edge(54,53,1)
+graph.add_edge(54,13,1)
+graph.add_edge(13,54,1)
+graph.add_edge(54,55,1)
+graph.add_edge(55,54,1)
+graph.add_edge(55,27,1)
+graph.add_edge(27,55,1)
+graph.add_edge(55,56,1)
+graph.add_edge(56,55,1)
+graph.add_edge(56,28,1)
+graph.add_edge(28,56,1)
+graph.add_edge(56,57,1)
+graph.add_edge(57,56,1)
+graph.add_edge(57,14,1)
+graph.add_edge(14,57,1)
+graph.add_edge(57,58,1)
+graph.add_edge(58,57,1)
+graph.add_edge(58,29,1)
+graph.add_edge(29,58,1)
+graph.add_edge(58,59,1)
+graph.add_edge(59,58,1)
+graph.add_edge(59,30,1)
+graph.add_edge(30,59,1)
+graph.add_edge(59,60,1)
+graph.add_edge(60,59,1)
+graph.add_edge(60,15,1)
+graph.add_edge(15,60,1)
+graph.add_edge(60,61,1)
+graph.add_edge(61,60,1)
+graph.add_edge(61,31,1)
+graph.add_edge(31,61,1)
+graph.add_edge(61,62,1)
+graph.add_edge(62,61,1)
+graph.add_edge(62,63,1)
+graph.add_edge(63,62,1)
+graph.add_edge(63,64,1)
+graph.add_edge(64,63,1)
+graph.add_edge(64,17,1)
+graph.add_edge(17,64,1)
+graph.add_edge(64,16,1)
+graph.add_edge(16,64,1)
+graph.add_edge(64,65,1)
+graph.add_edge(65,64,1)
+graph.add_edge(65,18,1)
+graph.add_edge(18,65,1)
+graph.add_edge(65,66,1)
+graph.add_edge(66,65,1)
+graph.add_edge(66,19,1)
+graph.add_edge(19,66,1)
+graph.add_edge(66,32,1)
+graph.add_edge(32,66,1)
+
+a = int(input())
+b = int(input())
+
+path = find_path(graph,a,b).nodes
+
+win = GraphWin("Окно для графики", 1010,1110)
+image = "src/map2.png"
+myImage = Image(Point(1010/2-4,1110/2-4),image)
+myImage.draw(win)
 
 
 
-x = {
-    1 :  Cell(  1 , [22,23] , [21,44] , [29,48] , [] , []),
-    2 :  Cell(  2 , [23,24] , [21,55] , [29,58] , [] , []),
-    3 :  Cell(  3 , [24,25] , [21,65] , [29,68] , [] , []),
-    4 :  Cell(  4 , [25, 5] , [21,76] , [29,80] , [] , []),
-    5 :  Cell(  5 , [ 4, 6] , [21,81] , [30,89] , [] , []),
-    6 :  Cell(  6 , [ 5, 7] , [31,89] , [40,81] , [] , []),
-    7 :  Cell(  7 , [ 6, 8] , [41,89] , [50,81] , [] , []),
-    8 :  Cell(  8 , [ 7, 9] , [51,89] , [60,81] , [] , []),
-    9 :  Cell(  9 , [ 8,10,12] , [61,89] , [70,81] , [] , []),
-    10 : Cell( 10 , [ 9,11,12] , [71,89] , [78,86] , [] , []),
-    11 : Cell( 11 , [10,12] , [79,89] , [79,85] , [] , []),
-    12 : Cell( 12 , [11,10,26] , [79,84] , [71,80] , [] , []),
-    13 : Cell( 13 , [26,27] , [79,72] , [71,64] , [] , []),
-    14 : Cell( 14 , [28,29] , [79,51] , [71,47] , [] , []),
-    15 : Cell( 15 , [30,31] , [79,32] , [71,26] , [] , []),
-    16 : Cell( 16 , [31,17] , [79,19] , [77,12] , [] , []),
-    17 : Cell( 17 , [16,31,18] , [76,19] , [60,11] , [] , []),
-    18 : Cell( 18 , [17,19] , [59,19] , [40,11] , [] , []),
-    19 : Cell( 19 , [18,20] , [39,19] , [21,11] , [] , []),
-    20 : Cell( 20 , [19,21] , [21,24] , [29,20] , [] , []),
-    21 : Cell( 21 , [20,22] , [21,34] , [29,25] , [] , []),
-    22 : Cell( 22 , [21, 1] , [21,43] , [29,36] , [] , []),
-    23 : Cell( 23 , [ 1, 2] , [21,54] , [29,49] , [] , []),
-    24 : Cell( 24 , [ 2, 3] , [21,64] , [29,59] , [] , []),
-    25 : Cell( 25 , [ 3, 4] , [21,75] , [29,69] , [] , []),
-    26 : Cell( 26 , [12,13] , [71,80] , [79,74] , [] , []),
-    27 : Cell( 27 , [13,28] , [71,64] , [79,60] , [] , []),
-    28 : Cell( 28 , [14,27] , [71,59] , [79,53] , [] , []),
-    29 : Cell( 29 , [30,14] , [71,47] , [79,41] , [] , []),
-    30 : Cell( 30 , [15,29] , [71,40] , [79,34] , [] , []),
-    31 : Cell( 31 , [15,16,17] , [71,26] , [79,21] , [] , [])
+
+k = "1=20,46-2=20,56-3=20,66-4=20,76-5=20,86-6=36,90-7=46,90-8=56,90-9=66,90-10=76,90-11=80,87-12=80,80-13=80,66-14=80,52-15=80,33-16=80,14-17=76,10-18=56,10-19=36,10-20=30,24-21=30,34-22=30,44-23=30,54-24=30,64-25=30,74-26=70,74-27=70,64-28=70,54-29=70,44-30=70,34-31=70,24-32=25,15-33=25,24-34=25,34-35=25,44-36=25,46-37=25,54-38=25,56-39=25,64-40=25,66-41=25,74-42=25,76-43=25,85-44=25,86-45=36,85-46=46,85-47=56,85-48=66,85-49=75,85-50=75,87-51=76,87-52=75,80-53=75,74-54=75,66-55=75,64-56=75,54-57=75,52-58=75,44-59=75,34-60=75,33-61=75,24-62=75,15-63=76,15-64=76,14-65=56,15-66=36,15-67=20,15"
+k = k.split("-")
+l = len(k)
+for i in range(0,l):
+    k[i] = k[i].split("=")
+    k[i][0] = int(k[i][0])
+    k[i][1] = eval("["+k[i][1]+"]")
+
+l = len(path)
+for i in range(0,l-1):
+    s = path[i]
+    f = path[i+1]
+
+    line = Line(Point(k[s-1][1][0]*10,k[s-1][1][1]*10),Point(k[f-1][1][0]*10,k[f-1][1][1]*10))
+    line.setWidth(15)
+    line.draw(win)
 
 
 
 
 
-}
 
-#k = "1 [21,44]-1 [29,48]-2 [21,55]-2 [29,58]-3 [21,65]-3 [29,68]-4 [21,76]-4 [29,80]-5 [21,81]-5 [30,89]-6 [31,89]-6 [40,81]-7 [41,89]-7 [50,81]-8 [51,89]-8 [60,81]-9 [61,89]-9 [70,81]-10 [71,89]-10 [78,86]-11 [79,89]-11 [79,85]-12 [79,84]-12 [71,80]-13 [79,72]-13 [71,64]-14 [79,51]-14 [71,47]-15 [79,32]-15 [71,26]-16 [79,19]-16 [77,12]-17 [76,19]-17 [60,11]-18 [59,19]-18 [40,11]-19 [39,19]-19 [21,11]-20 [21,24]-20 [29,20]-21 [21,34]-21 [29,25]-22 [21,43]-22 [29,36]-23 [21,54]-23 [29,49]-24 [21,64]-24 [29,59]-25 [21,75]-25 [29,69]-26 [71,80]-26 [79,74]-27 [71,64]-27 [79,60]-28 [71,59]-28 [79,53]-29 [71,47]-29 [79,41]-30 [71,40]-30 [79,34]-31 [71,26]-31 [79,21]"
+# saves the current TKinter object in
+
+
+win.getMouse()
+win.close()
 
 
 

@@ -20,10 +20,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="254c5009-2257-4e9a-8387-1336c14ac496" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/maps.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/maps.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/text.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NewMap.py" beforeDir="false" afterPath="$PROJECT_DIR$/NewMap.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/map.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/map2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/map3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mapc.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mapc2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mapc2L.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mapc2XL.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/test.py" beforeDir="false" afterPath="$PROJECT_DIR$/test.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -49,10 +56,31 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Tapper" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../TeleBot" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RunManager" selected="Python.main (1)">
+    <configuration name="NewMap (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="maps" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/NewMap.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="NewMap" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="maps" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -141,6 +169,7 @@
       <list>
         <item itemvalue="Python.main (1)" />
         <item itemvalue="Python.test" />
+        <item itemvalue="Python.NewMap (1)" />
         <item itemvalue="Python.main" />
         <item itemvalue="Python.NewMap" />
       </list>
@@ -172,7 +201,14 @@
       <option name="project" value="LOCAL" />
       <updated>1619099106503</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Заполнил словарь клеток">
+      <created>1619228715288</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1619228715288</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -190,44 +226,62 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Скопировал из репозитория labirint" />
     <MESSAGE value="Для создания массива клеток" />
-    <option name="LAST_COMMIT_MESSAGE" value="Для создания массива клеток" />
+    <MESSAGE value="Заполнил словарь клеток" />
+    <option name="LAST_COMMIT_MESSAGE" value="Заполнил словарь клеток" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="420" y="281" key="FileChooserDialogImpl" timestamp="1619131302507">
+    <state x="420" y="281" key="FileChooserDialogImpl" timestamp="1619427704888">
       <screen x="0" y="0" width="2560" height="1040" />
     </state>
-    <state x="420" y="281" key="FileChooserDialogImpl/0.0.2560.1040/-1920.0.1920.1040@0.0.2560.1040" timestamp="1619131302507" />
-    <state width="1256" height="344" key="GridCell.Tab.0.bottom" timestamp="1619228638087">
+    <state x="-1605" y="281" key="FileChooserDialogImpl/0.0.2560.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1619396714407" />
+    <state x="420" y="281" key="FileChooserDialogImpl/0.0.2560.1040/-1920.0.1920.1040@0.0.2560.1040" timestamp="1619427704888" />
+    <state width="2539" height="272" key="GridCell.Tab.0.bottom" timestamp="1619457374559">
       <screen x="0" y="0" width="2560" height="1040" />
     </state>
-    <state width="1256" height="344" key="GridCell.Tab.0.bottom/0.0.2560.1040/-1920.0.1920.1040@0.0.2560.1040" timestamp="1619228638087" />
-    <state width="1256" height="344" key="GridCell.Tab.0.center" timestamp="1619228638086">
+    <state width="1258" height="275" key="GridCell.Tab.0.bottom/0.0.2560.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1619422571216" />
+    <state width="2539" height="272" key="GridCell.Tab.0.bottom/0.0.2560.1040/-1920.0.1920.1040@0.0.2560.1040" timestamp="1619457374559" />
+    <state width="2539" height="272" key="GridCell.Tab.0.center" timestamp="1619457374559">
       <screen x="0" y="0" width="2560" height="1040" />
     </state>
-    <state width="1256" height="344" key="GridCell.Tab.0.center/0.0.2560.1040/-1920.0.1920.1040@0.0.2560.1040" timestamp="1619228638086" />
-    <state width="1256" height="344" key="GridCell.Tab.0.left" timestamp="1619228638086">
+    <state width="1258" height="275" key="GridCell.Tab.0.center/0.0.2560.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1619422571216" />
+    <state width="2539" height="272" key="GridCell.Tab.0.center/0.0.2560.1040/-1920.0.1920.1040@0.0.2560.1040" timestamp="1619457374559" />
+    <state width="2539" height="272" key="GridCell.Tab.0.left" timestamp="1619457374559">
       <screen x="0" y="0" width="2560" height="1040" />
     </state>
-    <state width="1256" height="344" key="GridCell.Tab.0.left/0.0.2560.1040/-1920.0.1920.1040@0.0.2560.1040" timestamp="1619228638086" />
-    <state width="1256" height="344" key="GridCell.Tab.0.right" timestamp="1619228638086">
+    <state width="1258" height="275" key="GridCell.Tab.0.left/0.0.2560.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1619422571216" />
+    <state width="2539" height="272" key="GridCell.Tab.0.left/0.0.2560.1040/-1920.0.1920.1040@0.0.2560.1040" timestamp="1619457374559" />
+    <state width="2539" height="272" key="GridCell.Tab.0.right" timestamp="1619457374559">
       <screen x="0" y="0" width="2560" height="1040" />
     </state>
-    <state width="1256" height="344" key="GridCell.Tab.0.right/0.0.2560.1040/-1920.0.1920.1040@0.0.2560.1040" timestamp="1619228638086" />
-    <state width="1256" height="344" key="GridCell.Tab.1.bottom" timestamp="1619228638087">
+    <state width="1258" height="275" key="GridCell.Tab.0.right/0.0.2560.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1619422571216" />
+    <state width="2539" height="272" key="GridCell.Tab.0.right/0.0.2560.1040/-1920.0.1920.1040@0.0.2560.1040" timestamp="1619457374559" />
+    <state width="2539" height="347" key="GridCell.Tab.1.bottom" timestamp="1619416510337">
       <screen x="0" y="0" width="2560" height="1040" />
     </state>
-    <state width="1256" height="344" key="GridCell.Tab.1.bottom/0.0.2560.1040/-1920.0.1920.1040@0.0.2560.1040" timestamp="1619228638087" />
-    <state width="1256" height="344" key="GridCell.Tab.1.center" timestamp="1619228638087">
+    <state width="2539" height="347" key="GridCell.Tab.1.bottom/0.0.2560.1040/-1920.0.1920.1040@0.0.2560.1040" timestamp="1619416510337" />
+    <state width="2539" height="347" key="GridCell.Tab.1.center" timestamp="1619416510337">
       <screen x="0" y="0" width="2560" height="1040" />
     </state>
-    <state width="1256" height="344" key="GridCell.Tab.1.center/0.0.2560.1040/-1920.0.1920.1040@0.0.2560.1040" timestamp="1619228638087" />
-    <state width="1256" height="344" key="GridCell.Tab.1.left" timestamp="1619228638087">
+    <state width="2539" height="347" key="GridCell.Tab.1.center/0.0.2560.1040/-1920.0.1920.1040@0.0.2560.1040" timestamp="1619416510337" />
+    <state width="2539" height="347" key="GridCell.Tab.1.left" timestamp="1619416510337">
       <screen x="0" y="0" width="2560" height="1040" />
     </state>
-    <state width="1256" height="344" key="GridCell.Tab.1.left/0.0.2560.1040/-1920.0.1920.1040@0.0.2560.1040" timestamp="1619228638087" />
-    <state width="1256" height="344" key="GridCell.Tab.1.right" timestamp="1619228638087">
+    <state width="2539" height="347" key="GridCell.Tab.1.left/0.0.2560.1040/-1920.0.1920.1040@0.0.2560.1040" timestamp="1619416510337" />
+    <state width="2539" height="347" key="GridCell.Tab.1.right" timestamp="1619416510337">
       <screen x="0" y="0" width="2560" height="1040" />
     </state>
-    <state width="1256" height="344" key="GridCell.Tab.1.right/0.0.2560.1040/-1920.0.1920.1040@0.0.2560.1040" timestamp="1619228638087" />
+    <state width="2539" height="347" key="GridCell.Tab.1.right/0.0.2560.1040/-1920.0.1920.1040@0.0.2560.1040" timestamp="1619416510337" />
+    <state x="-1457" y="166" key="SettingsEditor" timestamp="1619411382111">
+      <screen x="-1920" y="0" width="1920" height="1040" />
+    </state>
+    <state x="-1457" y="166" key="SettingsEditor/0.0.2560.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1619411382111" />
+    <state x="872" y="255" key="Vcs.Push.Dialog.v2" timestamp="1619228744271">
+      <screen x="0" y="0" width="2560" height="1040" />
+    </state>
+    <state x="872" y="255" key="Vcs.Push.Dialog.v2/0.0.2560.1040/-1920.0.1920.1040@0.0.2560.1040" timestamp="1619228744271" />
+    <state x="1091" y="436" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1619228735549">
+      <screen x="0" y="0" width="2560" height="1040" />
+    </state>
+    <state x="1091" y="436" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.2560.1040/-1920.0.1920.1040@0.0.2560.1040" timestamp="1619228735549" />
   </component>
 </project>
